@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <Chronometer android:id="@+id/chronometer"
+                 android:layout_width="wrap_content"
+                 android:text="Chronometer"
+                 android:textSize="50sp"
+                 android:textStyle="bold"
+                 android:gravity="center"
+                 android:layout_alignParentTop="true"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentLeft="true"
+                 android:layout_alignParentRight="true">
+    </Chronometer>
+
+    <LinearLayout android:id="@+id/llButtons"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/chronometer"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentRight="true"
+                  android:orientation="horizontal" android:gravity="center_horizontal">
+        
+        <Button android:id="@+id/btnStartStop"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/btn_Start">
+        </Button>
+	    
+	    <Button android:id="@+id/btnLap"
+                android:layout_width="0dip"
+	            android:layout_weight="1"
+	            android:layout_height="match_parent"
+	            android:text="@string/btn_Lap">
+	    </Button>
+    </LinearLayout>
+
+    <ListView android:id="@+id/listViewLaps"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_below="@id/llButtons">
+    </ListView>
+</RelativeLayout>
